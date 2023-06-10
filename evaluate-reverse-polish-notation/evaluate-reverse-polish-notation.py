@@ -6,21 +6,19 @@ class Solution:
       
             
             if i == "+":
-                first_val=int(stack.pop())
-                second_val=int(stack.pop())
-                stack.append(second_val+first_val)
+                
+                stack.append(stack.pop()+stack.pop())
             elif i== "-":
-                first_val=int(stack.pop())
-                second_val=int(stack.pop())
+                first_val=(stack.pop())
+                second_val=(stack.pop())
                 stack.append(second_val-first_val)
             elif i=='*':
-                first_val=int(stack.pop())
-                second_val=int(stack.pop())
-                stack.append(second_val*first_val)
+                
+                stack.append(stack.pop()*stack.pop())
             elif i =="/":
-                first_val=int(stack.pop())
-                second_val=int(stack.pop())
-                stack.append(second_val/first_val)
+                first_val=(stack.pop())
+                second_val=(stack.pop())
+                stack.append(int(second_val/first_val))
             else:
-                stack.append(i)
-        return int(stack.pop())
+                stack.append(int(i))
+        return stack[0]
